@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard SpaceX</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <nav>
+        <a href="dashboard.html">
+          <img class="logo" src="LOGO.png" alt="logo">
+        </a>
+
+        <button class="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
+          <img src="arrow.png" class="dropdown">
+        </button>
+
+        <ul class="admin-menu">
+          <li class="menu-heading">
+            <h3>Dashboard</h3>
+          </li>
+          <li>
+            <a href="dashboard.html">
+              <img src="dashboard.png">
+              <span>Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#0">
+              <img src="group.png">
+              <span>Medereizigers</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#0">
+                <img src="choice.png">
+                <span>Bestellen</span>
+              </a>
+          </li>
+
+          <li>
+            <a href="#0">
+              <img src="wifi.png">
+              <span>Verbindingen</span>
+            </a>
+          </li>
+
+          <li class="menu-heading">
+            <h3>Instellingen</h3>
+          </li>
+
+          <li>
+            <a href="#0">
+              <img src="settings.png">
+              <span>Instellingen</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#0">
+              <img src="equalizer.png">
+              <span>Opties</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#0">
+              <img src="bar-chart.png">
+              <span>Grafieken</span>
+            </a>
+          </li>
+
+          <li>
+            <button class="collapse-btn" aria-expanded="true" aria-label="collapse menu">
+              <img src="left-arrow.png">
+              <span>Inklappen</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="page-content">
+      <section class="search-and-user">
+        <form>
+          <input type="search" placeholder="Zoek...">
+          <button type="submit" aria-label="submit form">
+            <img src="loupe.png">
+          </button>
+        </form>
+        <div class="admin-profile">
+          <span class="greeting">Hallo Brent</span>
+          <div class="notifications">
+            <span class="badge">4</span>
+              <img src="user.png">
+          </div>
+        </div>
+      </section>
+      <section class="grid">
+        <article>
+          <h1>Brandstofgebruik</h1>
+          <p>Brandstoffen (x 1000L) verbruikt per maand</p>
+        	<canvas id="myChart" class="line"></canvas>
+        </article>
+        <article>
+          <h1>Passagiers</h1>
+          <p>Passagiers per continent (totaal 303)</p>
+          <canvas id="doughnut-chart" width="800" height="450"></canvas>
+        </article>
+        <article>
+          <img src="astronaut.png" alt="astronaut">
+        </article>
+        <article>
+          <h1>Fastfood</h1>
+          <p>Hoeveelheid MacDonald menu's aanboord</p>
+          <canvas id="chart" width="800" height="450"></canvas>
+        </article>
+        <article>
+          <h2>Berichten van de kapitein</h2>
+          <h1>Geen recente berichten</h1>
+        </article>
+        <article>
+          <h2>Huidige snelheid</h2>
+          <h1>2000 km/h</h1>
+        </article>
+        <article>
+          <h2>Bestemming</h2>
+          <h1>Mars</h1>
+        </article>
+        <article>
+          <h2>De reis duurt nog</h2>
+          <h1 id="demo"></h1>
+        </article>
+        <article>
+          <h2>Komende maaltijd in</h2>
+          <h1>3 uur</h1>
+        </article>
+      </section>
+      <footer class="page-footer">
+        <small>SpaceX van BrentBoere
+        </small>
+      </footer>
+    </section>
+
+  <script src="dashboard.js"></script>
+  <script src="script.js"></script>
+
+  </body>
+</html>
